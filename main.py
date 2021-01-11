@@ -186,3 +186,180 @@ empleado.nombre  --------- Aqui
 #Propiedad protegida: Se puede acceder solo desde la clase padre y desde la clase que se haya heredado, pero no se puede acceder desde la instancia
 
 #Propiedad privada: Solo se puede acceder desde la clase padre, o sea la misma clase que lo declaró
+
+#Métodos accesores
+#Una sola propiedad debee poseer dos métodos accesores, los cuales son:
+
+#Método Getter: Retorna el valor actual de la propiedad
+
+#Método Setter: Modifica el valor de la propiedad
+
+#Ejemplo: Si un dispositivo posee la función de ajustar el brillo, estos métodos facilitan la lectura y la modificación de dicha propiedad
+
+#Tip: Antes de trabajar con los métodos accesores, se recomienda trabajar primero directamente con los atributos/propiedades, hasta que haya algo que nos oblige a hacer una modificación
+
+#Ejemplo en Python:
+
+class Empleado(Usuario): 
+    __salario = 0          
+
+    def modificar_salario(self.salario):  #Setter
+        self.__salario = salario
+
+    def ver_salario(self): #Getter
+        print(self.__salario)
+
+#Otra forma:
+
+class Usuario:
+    __edad = 0
+
+@property     #Getter
+def edad(self):
+    return self.__edad
+
+@edad.Setter   #Setter
+def edad(self.valor):
+    if(valor < 9):
+        raise ValueError('Edad no puede ser menor que 0')
+    self.__edad = valor
+
+class Empleado(Usuario):
+    __salario = 0
+
+empleado = Empleado("Uriel")
+empleado.edad = 26
+
+#Tips: Todas las propiedades deben iniciarse siendo privadas, y solo se haran públicas al menos que se tenga un requirimiento especial
+
+--------------------------------Abstracción------------------------------------------
+
+#Es tomar un concepto o problema, ignorar los detalles y ver el problema de forma más general, no se discute el como, sino el porque.
+
+#Significa ocultar detalles innecesarios y exponer lo esencial, para enfocarse en lo que hara el objeto y no como lo hace.
+
+Ejemplo 1
+
+class FilaBanco:
+    usuarios = {}
+
+    def siguiente_usuario(self,numero):
+        #Implementación
+        return usuarios[numero]
+
+    def formar_usuario(self,numero,usuario):
+        usuario[ticket] = usuario
+
+Ejemplo 2
+
+class Hash():
+    datos = {}
+
+    def obtener(self,llave):
+        datos[llave]
+
+    def agregar(self,llave,valor):
+        datos[llave] = valor
+
+#Hacen la misma función solo que el ejemplo 2 cumple con el paradigma de abstracción, ya que la implementación es muy general.
+#Se recomienda ir desde lo muy general, como es lo abstractos, hasta lo más específicos que es ya la implementación
+
+--------------------------------------------Polimorfismo------------------------------------------------------------------------
+
+#Se le dice asi a la habilidad de un objeto de tomar varias formas
+#Un objeto se considera polimorfico si pasa más de una prueba "Es un"
+
+#Ejemplo
+
+class User:
+
+class Employee(user):
+
+#Se dice que la clase Employee cumple una función polimorfica ya que puede tomar las propiedades de empleado y usuario
+
+#Se utiliza normalmente en las interfaces, pero en el caso de Python se utiliza el Duck Typing
+
+--------------------------------------------Examen----------------------------------------------------
+
+1.- Qué nivel de alcance tiene una propiedad cuando podemos acceder a ella desde la clase misma que lo declaró y desde clases que hayan heredado:
+R= protegida 
+
+2.- Qué imprimirá el siguiente código:
+
+class Page:
+ def print_footer(self):
+   print(“Hola”)
+
+class LegalPage(Page):
+ def print_footer(self):
+   print("Mundo")-
+   super().print_footer()
+
+   R= Mundo Hola 
+
+3.- Quiere decir que los datos y las funciones que manipulan estos datos se envían como una sola unidad:
+
+R= Encapsulación
+
+4.- Podemos decir que un objeto se puede considerar polimórfico sí:
+
+R= Pasa más de una prueba "es un"
+
+5.- Es una combinación de propiedades y atributos que lo describen, además de métodos y acciones que puede ejecutar:
+
+R= Objetos
+
+6.- Cuál es considerado el primer lenguaje de programación que implementa programación orientada a objetos
+
+R= Simula
+
+7.- Selecciona la que NO es una ventaja o característica de la herencia:
+
+R= Permite crear objetos escribiendo menos codigo
+
+8.- Significa ocultar detalles innecesarios y exponer únicamente lo esencial, de manera que te enfoques en qué es lo que hará el objeto, en lugar de cómo lo va a realizar:
+
+R= Abstracción
+
+9.- Imagina que estás implementando una clase para mostrar los cursos de un Plan de estudios, cuál de las siguientes implementaciones estaría usando abstracción:
+
+R= class PlanEstudios:
+  cursos = []
+
+  def siguiente_curso(self):
+    # Implementación
+plan = PlanEstudios()
+plan.siguiente_curso()
+
+10.- Es una estrategia de la programación orientada a objetos para reciclar código
+
+R= Composición
+
+11.- Son documentos en los que se define el comportamiento del objeto, las propiedades que tiene y las acciones que puede realizar:
+
+R= Clases
+
+#12.- Cuál de estos NO es un paradigma de programación
+
+#R= Prototipos 
+
+13.- Tiene el propósito de guiar la implementación del lenguaje de programación, es un estilo o una forma de solucionar algo:
+
+R= Un paradigma de programación
+
+#14.- Qué es una instancia en programación orientada a objetos
+
+#R= Una variable inicializada 
+
+15.- Buscan definir la estructura de un objeto de manera general, sin definir los detalles de la implementación
+
+R= Clases abstractas
+
+16.- Los getters y setters son dos tipos de:
+
+R= Métodos accesores
+
+17.- Son los principios en los que se basa la programación orientada a objetos
+
+R= Abtracción, encapsulación. heencia y polimorfismo
+

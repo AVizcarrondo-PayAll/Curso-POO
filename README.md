@@ -29,7 +29,7 @@
 
 ## 🧐 Acerca de <a name = "about"></a>
 
-Este repositorio tendrá como fin guardar la informacion obtenida del curso de POO
+Este repositorio tendrá como fin guardar la informacion obtenida del curso de POO desarrollado por codigofacilito.com
 
 ## 🏁 Comenzar <a name = "getting_started"></a>
 
